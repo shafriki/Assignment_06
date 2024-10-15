@@ -35,6 +35,49 @@
 </head>
 
 <body class="lato">
-   
+   <!-- header section start -->
+   <header class="max-w-screen-xl mx-auto">
+
+    <!-- navbar content start -->
+    <nav class="flex items-center justify-between mt-5 mx-3 lg:mx-0">
+
+      <!-- peddy logo -->
+      <div class="flex items-center gap-2 cursor-pointer">
+          <img src="./images/logo.webp" alt="logo">
+          <p class="text-2xl font-extrabold hover:text-[#0E7A81]">Peddy</p>
+      </div>
+  
+      <!-- menu list -->
+      <div class="flex items-center gap-8 text-base font-normal hidden lg:flex">
+          <a href="#" class="hover:font-bold hover:text-[#0E7A81]">Home</a>
+          <a href="#" class="hover:font-bold hover:text-[#0E7A81]">Shop</a>
+          <a href="#" class="hover:font-bold hover:text-[#0E7A81]">Contact</a>
+      </div>
+  
+      <!-- profile -->
+      <i class="fa-regular fa-user border border-gray-400 rounded-full p-2 hover:bg-[#0E7A81] hover:text-white cursor-pointer hidden lg:block"></i>
+      <i id="bar" class="fa-solid fa-bars lg:hidden cursor-pointer"></i>
+    </nav>
+
+    <div id="dropdown" class="hidden lg:hidden flex flex-col items-start mt-2 absolute right-3 bg-white shadow-lg rounded-md z-50">
+      <a href="#" class="block w-full px-3 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#0E7A81] border-b border-gray-200">Home</a>
+      <a href="#" class="block w-full px-3 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#0E7A81] border-b border-gray-200">Shop</a>
+      <a href="#" class="block w-full px-3 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#0E7A81]">Contact</a>
+    </div>
+    <!-- navbar content end -->
+  
+     <!-- banner content start -->
+      <section class="mt-12 mx-3 lg:mx-0">
+        <div class="flex flex-col items-center">
+            <p class="text-lg lg:text-xl font-semibold text-[#13131399]">Bringing Families Together ❤️‍🔥</p>
+            <h1 class="text-3xl lg:text-6xl font-bold text-center mt-3">Your Path to Adoption <br> Starts Here</h1>
+            <p class="text-xs lg:text-base font-normal text-center lg:w-3/5 mt-3">Giving Animals a Second Chance at a Loving Home Every year, millions of animals end up in shelters or rescue organizations, desperately waiting for someone to give them a second chance at life.</p>
+            <a href="#best"><button class="btn bg-[#0E7A81] text-white text-xs lg:text-base px-5 lg:px-9 mt-4" onclick="handleSearch()">View More</button></a>
+            <img src="./images/pet.webp" alt="">
+        </div>
+      </section>
+     <!-- banner content end -->
+</header>
+<!-- header section end -->
   </body>
 </html>
