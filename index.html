@@ -79,5 +79,118 @@
      <!-- banner content end -->
 </header>
 <!-- header section end -->
+
+<!-- main section start -->
+<main class="max-w-screen-xl mx-auto">
+
+  <!-- adopt section start -->
+  <section class="px-3 lg:px-0" id="best">
+      <div class="flex flex-col items-center">
+          <h1 class="text-2xl lg:text-4xl font-extrabold mb-2">Adopt Your Best Friend</h1>
+          <p class="text-center text-xs lg:text-base font-normal text-[#131313B3] mb-5">Here you can choose an animal for adoption. There are different types of animals.</p>
+
+          <!-- dog cat rabbit and birds category button -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+              <button id="dog" class= "btn lg:px-10">
+                <img src="./images/dog.png" alt="" class="w-8"> Dogs</button>
+              <button id="cat" class="btn lg:px-10">
+                <img src="./images/cat.png" alt="" class="w-8"> Cats</button>
+              <button id="rabbit" class="btn lg:px-10">
+                <img src="./images/bunny.png" alt="" class="w-8"> Rabbit</button>
+              <button id="bird" class="btn lg:px-10">
+                <img src="./images/parrot.png" alt="" class="w-8"> Birds</button>
+          </div>
+      </div>
+
+      <!-- sort by price content -->
+      <div class="flex items-center justify-between mt-4">
+          <p class="text-xs md:text-lg lg:text-xl font-extrabold">Best Deal For you</p>
+          <button id="sort" class="btn bg-[#0E7A81] text-white text-xs md:text-lg lg:text-lg lg:px-10">Sort by Price</button>
+      </div>
+
+  </section>
+  <!-- adopt section end -->
+
+
+  <!-- pets section start -->
+  <section class="mx-5 md:mx5 lg:mx-0">
+
+      <!-- loading bar -->
+      <div class="text-center mt-3" id="loading">
+        <span id="spinner" class="hidden loading loading-bars loading-lg"></span>
+      </div>
+
+      <!-- pets content start -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-6">
+        <div id="pet-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:col-span-9 gap-6 lg:border lg:border-gray-300 lg:rounded-lg p-3 lg:shadow-lg">
+
+          <!--pets card contents start -->
+          <div class="pet-card border border-gray-400 rounded-lg p-4 shadow-lg transition-transform transform hover:scale-105">
+            <img src="./images/example.png" alt="Pet Name" class="w-full h-48 object-cover rounded-t-lg" />
+            <h3 class="text-lg font-semibold mt-2">Pet Name</h3>
+            <p class="text-gray-600">Birth: Pet Birth</p>
+            <p class="text-gray-600">Breed: Pet Breed</p>
+            <p class="text-gray-800 font-bold">Price: $Price</p>
+            <button id="liked" class="btn text-[#0E7A81] border-gray-500 mt-2 mr-3">
+              <i class="fa-regular fa-thumbs-up"></i>
+            </button>
+            <button id="adopt" class="btn text-[#0E7A81] border-gray-500 mt-2 mr-3">Adopt</button>
+            <button id="details" class="btn text-[#0E7A81] border-gray-500 mt-2">Details</button>
+          </div>
+        </div>
+        <!-- pets card contents end -->
+      
+        <!-- liked thumblin content start -->
+        <div id="liked-pets" class="hidden lg:block border border-gray-300 rounded-lg p-4 shadow-lg lg:col-span-3">
+          <div id="liked-pets-grid" class="grid grid-cols-2 gap-4">
+          </div>
+        </div>
+        <!-- liked thumblin content end -->
+      </div>
+      <!-- pets content end -->
+
+    <!-- show pet details modal content start --> 
+    <section>
+      <div id="petDetailsModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 hidden px-5 lg:px-0 ">
+        <div class="bg-white rounded-lg p-6 w-full max-w-3xl md:max-w-lg sm:max-w-xs relative">
+            <img id="modalPetImage" src="" alt="pet img" class=" lg:w-full md:h-48 lg:h-48 object-cover rounded-lg mb-4">
+            <h3 id="modalPetName" class="text-lg font-semibold mb-4">Pet Name</h3>
+            <div class="flex justify-between border-b-2 border-gray-500">
+            <div>
+            <p id="modalPetBreed" class="text-gray-600 mb-2 text-xs lg:text-base">Breed: Pet Breed</p>
+            <p id="modalPetGender" class="text-gray-600 mb-2 text-xs lg:text-base">Gender: Pet Gender</p>
+            <p id="modalPetVaccine" class="text-gray-600 mb-2 text-xs lg:text-base">Vacinated Status: Pet Vacinated</p>
+            </div>
+            <div>
+              <p id="modalPetBirth" class="text-gray-600 mb-2 text-xs lg:text-base">Birth: Pet Birth</p>
+              <p id="modalPetPrice" class="text-gray-800 text-xs lg:text-base">Price: $Price</p>
+            </div>
+            </div>
+            <p class="text-lg font-bold mb-2 mt-1">Detail Information</p>
+            <p id="modalPetDetails" class="text-gray-600 text-xs lg:text-base mb-2 text-justify">pet Details Info</p>
+            <button id="cancelModal" class="mt-4 w-full bg-gray-200 hover:bg-gray-300 text-[#0E7A81] font-semibold py-2 px-4 rounded">
+                Cancel
+            </button>
+        </div>
+      </div>
+    </section>
+    <!-- show pet details modal content end -->
+
+    <!-- adopt modal content start -->
+    <div id="adoptModal" class="roboto fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+      <div class="bg-white p-6 md:px-8 lg:px-12 rounded-lg text-center">
+        <div class="flex justify-center mb-1"> 
+          <img src="./images/handshaking.gif" alt="hand-shake" class="w-16 lg:w-28"> 
+        </div>
+          <h2 class="text-2xl lg:text-6xl font-extrabold text-[#4CBB17] mb-4">Congrates</h2>
+          <p class="text-xs lg:text-base font-normal text-gray-500 lato">Adoption Process is Start For your Pet</p>
+          <p id="countdown" class="text-2xl lg:text-5xl font-extrabold text-[#FF5733] lato">3</p>
+      </div>
+    </div>
+    <!-- adopt modal content end -->  
+  </section>
+  <!-- pet section end -->
+</main>
+<!-- main section end -->
   </body>
 </html>
